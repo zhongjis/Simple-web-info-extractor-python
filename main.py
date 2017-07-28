@@ -14,7 +14,7 @@ urls = []
 
 # url collecting
 while url != "":
-	url = input(">>> please input the url you want to use: ")
+	url = input(">>> please input the url you want to use, or press enter to stop: ")
 	if url != "":
 		urls.append(url)
 

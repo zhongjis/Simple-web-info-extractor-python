@@ -27,10 +27,20 @@ style0 = xlwt.easyxf('font: name Times New Roman',
 print(">> running, please wait.")
 start_time = time.time()
 
+# add a worksheet shows adding history
 Tab = 0
-for i in urls: # get url
+count = 0
+ws = wb.add_sheet("Order")
+for url in urls:
+	ws.write(count, 0, str(Tab), style0)
+	ws.write(count, 1, url, style0)
+	Tab += 1
+	count += 1
+
+Tab = 0
+for url in urls: # get url
 	# retrieving content from the websites (which are txt files)
-	respond = urllib.request.urlopen(i)
+	respond = urllib.request.urlopen(url)
 	lines = respond.readlines() #whole txt
 
 	ws = wb.add_sheet(str(Tab))

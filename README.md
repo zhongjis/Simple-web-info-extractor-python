@@ -6,10 +6,10 @@ I am new to Python so plz feel free to give your advices in the comment!
 
 IMPORTALL: 
 ==========
-1:: In order to run this program, you need to add xlwt to your python library\n
+1: In order to run this program, you need to add xlwt to your python library\n
 (xlwt's github page: https://github.com/python-excel/xlwt)
 
-2:: Also you need Python3 installed on your platform.
+2: Also you need Python3 installed on your platform.
 
 INSTALL:
 ========

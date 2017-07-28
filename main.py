@@ -30,6 +30,6 @@ for i in txt:
 
 # finishing up
 wb.save('result.xls')
-print(">> Done. result.xls saved")
+print(">> Done. result.xls saved. Please check program directory")
 respond.close()
 

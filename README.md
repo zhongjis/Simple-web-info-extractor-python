@@ -15,12 +15,6 @@ INSTALL:
 ========
 Just download it and run main.py
 
-TODO:
-=====
-1: Supprot url validator. For now program will error out if any input is not url
-2: Code efficiency and readbility improving
-3: etc.
-
 What does it do?
 ================
 
@@ -29,4 +23,10 @@ This program can extract data from some specific website and then import data to
 Here's a sample website url:
 https://www.google.com/finance/getprices?i=360&p=10d&f=d,o,h,l,c,v&df=cpct&q=AAPL
 
-The sample output is included in master branch.
+The sample output is included in master branch.'
+
+TODO:
+=====
+1: Supprot url validator. For now program will error out if any input is not url \n
+2: Code efficiency and readbility improving \n
+3: Make a standalone executable build

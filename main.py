@@ -1,6 +1,6 @@
 # this file is for environment and connection setup
 # also the UIs will be set up here too
-# warning: this only works for txt file
+# warning: this program only support simple txt file on url
 
 import urllib.request
 import xlwt
@@ -12,22 +12,22 @@ print (">> Welcome")
 url = "default"
 urls = []
 
-print(">> program runing")
-
+# url collecting
 while url != "":
-	url = input(">> please input the url you want to use: ")
+	url = input(">>> please input the url you want to use: ")
 	if url != "":
 		urls.append(url)
 
+# workbook init
 wb = xlwt.Workbook()
 style0 = xlwt.easyxf('font: name Times New Roman',
     num_format_str='#,##0.00')
 
 # time starts counting here
-print(">> running, please wait.")
+print(">>> running, please wait.")
 start_time = time.time()
 
-# add a worksheet shows adding history
+# a tab showing adding order
 Tab = 0
 count = 0
 ws = wb.add_sheet("Order")
@@ -51,9 +51,12 @@ for url in urls: # get url
 
 	Tab += 1
 
-# finishing up
-wb.save('result.xls')
+# finishing up: file name editing && saving
+current_time = time.localtime();
+file_name = str(current_time.tm_year) + "_" + str(current_time.tm_mon) + "_"  + str(current_time.tm_mday) + "_" + str(current_time.tm_hour) + "_"  + str(current_time.tm_min) + "_"  + str(current_time.tm_sec) + ".xls"
+
+wb.save(file_name)
 respond.close()
-print(">> Done. result.xls saved. Please check program directory.")
-print(">> Total time spent: %s s." % (time.time() - start_time))
+print(">>> Done. Results are saved in %s. Please check program directory." % (file_name))
+print(">>> Total time spent: %ss." % (time.time() - start_time))
 

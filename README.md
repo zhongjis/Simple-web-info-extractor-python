@@ -33,3 +33,5 @@ TODO:
 2: Code efficiency and readbility improving.
 
 3: Make a standalone executable build.
+
+4: Detect repeated url

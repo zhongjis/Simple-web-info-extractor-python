@@ -1,11 +1,11 @@
-Simple web info extractor for Zihao Ye
-=========================
-This is a simple url info extracor written in python3.
+Simple data extractor for Google Finance/getprice
+=================================================
+This is a case-specific program, please check the sample url before using it.
 Don't be hesitate to use it or add on something you think necessary!
 I am new to Python so plz feel free to give your advices in the comment!
 
-IMPORTALL: 
-==========
+Prerequisites 
+=============
 1: In order to run this program, you need to add xlwt to your python library
 (xlwt's github page: https://github.com/python-excel/xlwt)
 

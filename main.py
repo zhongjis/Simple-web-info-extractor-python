@@ -1,3 +1,4 @@
+# main.py
 # this file is for environment and connection setup
 # also the UIs will be set up here too
 # warning: this program only support simple txt file on url
@@ -5,18 +6,17 @@
 import urllib.request
 import xlwt
 import time
+import function
 
-print (">> Welcome")
 # test_url = https://www.google.com/finance/getprices?i=360&p=10d&f=d,o,h,l,c,v&df=cpct&q=AAPL
 
-url = "default"
-urls = []
+print (">> Welcome")
 
-# url collecting
-while url != "":
-	url = input(">>> please input the url you want to use, or press enter to stop: ")
-	if url != "":
-		urls.append(url)
+# data base init
+db = function.db()
+
+#asking for urls
+db.ask_for_urls()
 
 # workbook init
 wb = xlwt.Workbook()
@@ -31,14 +31,14 @@ start_time = time.time()
 Tab = 0
 count = 0
 ws = wb.add_sheet("Order")
-for url in urls:
+for url in db.urls:
 	ws.write(count, 0, str(Tab), style0)
 	ws.write(count, 1, url, style0)
 	Tab += 1
 	count += 1
 
 Tab = 0
-for url in urls: # get url
+for url in db.urls: # get url
 	# retrieving content from the websites (which are txt files)
 	respond = urllib.request.urlopen(url)
 	lines = respond.readlines() #whole txt

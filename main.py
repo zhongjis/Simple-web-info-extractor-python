@@ -12,22 +12,22 @@ import function
 
 print (">> Welcome")
 
-# data base init
+# data base init###########################################################
 db = function.db()
 db.ask_for_urls()
 
-# workbook init
+# workbook init############################################################
 result_doc = function.workbook()
 style0 = xlwt.easyxf('font: name Times New Roman',
     num_format_str='#,##0.00') # default style
 
 print(">>> running, please wait.")
-# time starts counting here
+# time starts counting here###############################################
 start_time = time.time()
 result_doc.add_intro(db.urls, style0)
 result_doc.add_sheets(db.urls, style0)
 
-# finishing up: file name editing && saving ###########################################
+# finishing up: file name editing && saving#################################
 current_time = time.localtime();
 file_name = str(current_time.tm_year) + "_" + str(current_time.tm_mon) + "_"  + str(current_time.tm_mday) + "_" + str(current_time.tm_hour) + "_"  + str(current_time.tm_min) + "_"  + str(current_time.tm_sec) + ".xls"
 

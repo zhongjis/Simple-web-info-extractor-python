@@ -42,7 +42,12 @@ class workbook:
             count = 0
             ws = self.wb.add_sheet(str(tab))
             for line in lines:
-                ws.write(count, 0, line.decode("utf8"), style)
+                words = line.decode("utf8")
+                words = words.split(",")
+                word_count = 0
+                for word in words:
+                    ws.write(count, word_count, word, style)
+                    word_count += 1
                 count += 1
             tab += 1
         respond.close()

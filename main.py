@@ -10,7 +10,7 @@ import function
 # test_url = https://www.google.com/finance/
 # getprices?i=360&p=10d&f=d,o,h,l,c,v&df=cpct&q=AAPL
 
-print (">>> Welcome")
+print(">>> Welcome")
 
 # data base init
 db = function.db()
@@ -33,14 +33,14 @@ else:
 
     # finishing up: file name editing && saving
     current_time = time.localtime()
-    file_name = str(current_time.tm_year) + "_"
-    + str(current_time.tm_mon) + "_"
-    + str(current_time.tm_mday) + "_"
-    + str(current_time.tm_hour) + "_"
-    + str(current_time.tm_min) + "_"
-    + str(current_time.tm_sec) + ".xls"
+    file_name = str(current_time.tm_year) + \
+        "_" + str(current_time.tm_mon) + \
+        "_" + str(current_time.tm_mday) + \
+        "_" + str(current_time.tm_hour) + \
+        "_" + str(current_time.tm_min) + \
+        "_" + str(current_time.tm_sec) + ".xls"
 
     result_doc.save(file_name)
-    print(""">>> Done. Results are saved in %s. """ +
-          """Please check program directory.""" % (file_name))
+    print(""">>> Done. Results are saved in %s. """ % (file_name) +
+          """Please check program directory.""")
     print(">>> Total time spent: %ss." % (time.time() - start_time))

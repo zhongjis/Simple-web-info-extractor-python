@@ -30,8 +30,18 @@ TODO:
 =====
 1: Supprot url validator. For now program will error out if any input is not url.
 
-2: Code efficiency and readbility improving.
+2: Code efficiency imporvement.
 
-3: Make a standalone executable build.
+3: Code readibility improvement. (Done)
 
-4: Detect repeated url
+4: Make a standalone executable build.
+
+5: Detect repeated url
+
+UPDATE:
+=======
+Aug. 2, 2017
+
+1: Code style updated (readibility), now it satisfies PEP8 (https://www.python.org/dev/peps/pep-0008/#tabs-or-spaces)
+
+2: txt-excel method improved, now different data will be seprated into different colums.

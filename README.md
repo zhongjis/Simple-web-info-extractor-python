@@ -45,3 +45,9 @@ Aug. 2, 2017
 1: Code style updated (readibility), now it satisfies PEP8 (https://www.python.org/dev/peps/pep-0008/#tabs-or-spaces)
 
 2: txt-excel method improved, now different data will be seprated into different colums.
+
+3: Sample Output file updated. You can check the latest output sample under master branch.
+
+4: Sample Console input model is added, check it out!
+
+5: Also, repeated url will be be allowed anymore.

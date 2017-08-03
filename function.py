@@ -21,6 +21,7 @@ class workbook:
 
     # add an intro page showing the adding history incase user need it
     def add_intro(self, urls, style):
+        urls = set(urls)
         tab = 0
         count = 0
         ws = self.wb.add_sheet("Intro")
@@ -33,6 +34,7 @@ class workbook:
 
     # add pages for each url
     def add_sheets(self, urls, style):
+        urls = set(urls)
         tab = 0
 
         for url in urls:

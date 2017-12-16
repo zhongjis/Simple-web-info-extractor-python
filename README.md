@@ -32,11 +32,9 @@ TODO:
 
 2: Code efficiency imporvement.
 
-3: Code readibility improvement. (Done)
+3: Make a standalone executable build.(Mac/Win)
 
-4: Make a standalone executable build.
-
-5: Detect repeated url
+4: GUI 
 
 UPDATE:
 =======

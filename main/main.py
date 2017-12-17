@@ -5,7 +5,7 @@
 
 import time
 import xlwt
-import function
+import interface
 
 # test_url = https://www.google.com/finance/
 # getprices?i=360&p=10d&f=d,o,h,l,c,v&df=cpct&q=AAPL
